@@ -1,0 +1,119 @@
+#usda 1.0
+(
+    defaultPrim = "qlit"
+    upAxis = "Z"
+)
+def Xform "qlit"
+    {
+        token ui:displayGroup = "Material Graphs"
+        token ui:displayName = "qlit"
+        int ui:order = 1024
+        float3 xformOp:rotateXYZ = (0, -0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+        def Xform "B"
+        {
+            float3 xformOp:rotateXYZ = (90, 3.1805547e-15, 90)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-0.01098, -0.00756, 4.614364446098307e-16)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+            def SphereLight "B" (
+                apiSchemas = ["ShapingAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                color3f inputs:color = (0, 1, 0)
+                float inputs:diffuse = 4
+                bool inputs:enableColorTemperature = 0
+                float inputs:exposure = 0
+                float inputs:intensity = 0.1
+                bool inputs:normalize = 1
+                float inputs:radius = 0.05
+                float inputs:shaping:cone:angle = 180
+                float inputs:shaping:cone:softness
+                float inputs:shaping:focus
+                color3f inputs:shaping:focusTint
+                asset inputs:shaping:ies:file
+                bool treatAsPoint = 1
+                token ui:displayGroup = "Material Graphs"
+                token ui:displayName = "B"
+                int ui:order = 1024
+                float3 xformOp:rotateXYZ = (0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 8.213915658750182e-16, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        def Xform "G"
+        {
+            float3 xformOp:rotateXYZ = (90, 3.1805547e-15, 90)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-0.010983343319334156, 0.007555297771349629, 2.2898349882893854e-16)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+            def SphereLight "G" (
+                apiSchemas = ["ShapingAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                color3f inputs:color = (1, 0, 0)
+                float inputs:diffuse = 4
+                float inputs:exposure = 0
+                float inputs:intensity = 0.1
+                bool inputs:normalize = 1
+                float inputs:radius = 0.05
+                float inputs:shaping:cone:angle = 180
+                float inputs:shaping:cone:softness
+                float inputs:shaping:focus
+                color3f inputs:shaping:focusTint
+                asset inputs:shaping:ies:file
+                bool treatAsPoint = 1
+                token ui:displayGroup = "Material Graphs"
+                token ui:displayName = "G"
+                int ui:order = 1024
+                float3 xformOp:rotateXYZ = (0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+
+        def Xform "R"
+        {
+            float3 xformOp:rotateXYZ = (90, 3.1805547e-15, 90)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0.00934, 0.00047263114340592195, -8.673617379884035e-19)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+            def SphereLight "R" (
+                apiSchemas = ["ShapingAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                color3f inputs:color = (0, 0, 1)
+                float inputs:diffuse = 4
+                float inputs:exposure = 0
+                float inputs:intensity = 0.1
+                bool inputs:normalize = 1
+                float inputs:radius = 0.05
+                float inputs:shaping:cone:angle = 180
+                float inputs:shaping:cone:softness
+                float inputs:shaping:focus
+                color3f inputs:shaping:focusTint
+                asset inputs:shaping:ies:file
+                bool treatAsPoint = 1
+                token ui:displayGroup = "Material Graphs"
+                token ui:displayName = "R"
+                int ui:order = 1024
+                float3 xformOp:rotateXYZ = (0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+            }
+        }
+    }
+
