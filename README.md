@@ -17,10 +17,10 @@ This project demonstrates how to build a tactile simulation by reproducing the r
 We follow the steps below to integrate the tactile simulation into our environment:
 ### 1. Modify the Surface Material
  In IsaacSim, we adjust RigidBody compliant contact stiffness to approximate the deformation of gel surfaces. However different models can have slightly different stiffness parameters. Here we adjust the parameters for the DIGIT finger-tip as follows, remember to bind the physics material to the core mesh.
- [!material](./img/material.png)
+ ![material](./img/material.png)
 ### 2. Setup Lights
  We use `SphereLight` in Omniverse to simulate the LED light source. Modify the light parameters as follows, then make two duplicates (a total of 3, R, G, and B respectively) and place them according to their real positions.
- [!light](./img/light.png)
+ ![light](./img/light.png)
 ### 3. Setup the Camera
  Mount the camera in the middle of the base facing the core mesh. The camera configuration is shown in [next section](#4-integrate-components-into-the-simulation). Remember to adjust the focal length and focus distance accordingly.
 ### 4. Integrate Components into the Simulation
@@ -43,7 +43,7 @@ camera_light_l = AssetBaseCfg(
 5. Image post-processing. We can process the images by first saving the static tactile image i.e., sensor output when there is no contact. Then, we can substract our sensor output by this static image and then add the difference to a real static image to approximate a real output. This is inspired by [tacto](https://github.com/facebookresearch/tacto).
 
 A demo of raw output and refined output is shown as follows.
-[!raw](./input_img.png)[!refined](./output_image.jpg)
+![raw](./input_img.png) ![refined](./output_image.jpg)
 ## Usage
 ```
 python demo_ts.py ## Run demo, refined output is save at output_image.jpg, direct output is saved at input_img.png, and difference is saved at subtracted_img.png.
