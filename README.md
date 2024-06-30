@@ -43,6 +43,7 @@ camera_light_l = AssetBaseCfg(
 5. Image post-processing. We can process the images by first saving the static tactile image i.e., sensor output when there is no contact. Then, we can substract our sensor output by this static image and then add the difference to a real static image to approximate a real output. This is inspired by [tacto](https://github.com/facebookresearch/tacto).
 
 A demo of raw output and refined output is shown as follows.
+
 ![raw](./input_img.png) ![refined](./output_image.jpg)
 ## Usage
 ```
