@@ -40,7 +40,8 @@ camera_l = CameraCfg(
 camera_light_l = AssetBaseCfg(
         prim_path="{ENV_REGEX_NS}/Robot/finger_left_tip_body/L", spawn=sim_utils.UsdFileCfg(usd_path="assets/lights.usda"), init_state=AssetBaseCfg.InitialStateCfg(pos=(0.006, 0, -0.003)))
 ```
-5. Image post-processing. We can process the images by first saving the static tactile image i.e., sensor output when there is no contact. Then, we can substract our sensor output by this static image and then add the difference to a real static image to approximate a real output. This is inspired by [tacto](https://github.com/facebookresearch/tacto).
+### 5. Image Post-processing
+ We can process the images by first saving the static tactile image i.e., sensor output when there is no contact. Then, we can subtract our sensor output by this static image and then add the difference to a real static image to approximate a real output. This is inspired by [tacto](https://github.com/facebookresearch/tacto).
 
 A demo of raw output and refined output is shown as follows.
 
